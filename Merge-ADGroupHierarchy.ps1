@@ -43,7 +43,7 @@ Param(
 	#>
 	[switch]$IncludeCurrentMembersInLog,
 	<#	Specifies whether current direct and indirect members are included in the HTML logs (if LogToFile or LogToEmail) are specified.  Depending on the size of the group, the output could be large.
-	    By default, how many direct and indirect members are included in the HTML but the members are not.  Direct and indirect members are included in the output of the script regardless.
+		By default, how many direct and indirect members are included in the HTML but the members are not.  Direct and indirect members are included in the output of the script regardless.
 	#>
 	[switch]$LogToFile,
 	<#	Specifies how many days to retain the scripts log files.  Set to 0 to disable log file cleanup.
@@ -90,8 +90,8 @@ Begin {
 		
 		.SYNOPSIS
 		Get-ADGroupMembers supporting large groups (< 5000)
-        .OUTPUTS
-        ADObject https://docs.microsoft.com/en-us/dotnet/api/microsoft.activedirectory.management.adobject?view=activedirectory-management-10.0
+		.OUTPUTS
+		ADObject https://docs.microsoft.com/en-us/dotnet/api/microsoft.activedirectory.management.adobject?view=activedirectory-management-10.0
 		.EXAMPLE
 		$DirectMembersOfBigGroup = Get-ADGroupMembers 'BigGroup' -Verbose
 		.EXAMPLE
@@ -308,9 +308,9 @@ Begin {
 			[System.Management.Automation.ActionPreference]$VerbosePreference
 		)
 		If($VerbosePreference -eq 'Continue' -And $WriteType -eq "Host") {
-            $WriteType = "Verbose"
-        }
-        If($IncludeTimestamp) {
+			$WriteType = "Verbose"
+		}
+		If($IncludeTimestamp) {
 			$Message = "$(Get-Date) | $Message"
 		}
 		switch ($WriteType) {
