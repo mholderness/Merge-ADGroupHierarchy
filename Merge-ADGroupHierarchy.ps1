@@ -39,11 +39,11 @@ Param(
 		Used if the role groups that comprise the membership of a role group are empty (accidently or intentionally) and you'd prefer to manually clear direct members (or fix the role groups).
 	#>
 	[switch]$SkipGroupWithNoIndirectMember,
-	<#	Specifies whether to log the scripts output to file.  A transcript is started and the output is converted to and recorded in an HTML file.
-	#>
-	[switch]$IncludeCurrentMembersInLog,
 	<#	Specifies whether current direct and indirect members are included in the HTML logs (if LogToFile or LogToEmail) are specified.  Depending on the size of the group, the output could be large.
 		By default, how many direct and indirect members are included in the HTML but the members are not.  Direct and indirect members are included in the output of the script regardless.
+	#>
+	[switch]$IncludeCurrentMembersInLog,
+	<#	Specifies whether to log the scripts output to file.  A transcript is started and the output is converted to and recorded in an HTML file.
 	#>
 	[switch]$LogToFile,
 	<#	Specifies how many days to retain the scripts log files.  Set to 0 to disable log file cleanup.
